@@ -4,7 +4,6 @@ import { useState } from "react";
 import authService from "@/appwrite/auth";
 import { useUserStore } from "@/store/store";
 import { useNavigate, Link } from "react-router-dom";
-import { log } from "console";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -23,7 +22,6 @@ const Login = () => {
         navigate("/");
       }
     } else {
-      console.log(session);
       console.log("FAILED LOGIN");
     }
   };
